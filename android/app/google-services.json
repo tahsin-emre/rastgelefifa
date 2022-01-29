@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "749681209884",
+    "project_id": "rastgelefifa",
+    "storage_bucket": "rastgelefifa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749681209884:android:52034fbbd3c4672c28a5d9",
+        "android_client_info": {
+          "package_name": "com.tahsinemre.rastgelefifa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749681209884-3n9rdg20f82789pb9gf9n1i2657vbkbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFopydye9o0zkTHKd_hivx0bF67ec5V_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749681209884-3n9rdg20f82789pb9gf9n1i2657vbkbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

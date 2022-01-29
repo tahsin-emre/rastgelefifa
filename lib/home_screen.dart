@@ -1,5 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:rastgelefifa/history_screen.dart';
 import 'package:rastgelefifa/list_screen.dart';
+import 'package:rastgelefifa/match_model.dart';
+import 'package:rastgelefifa/match_service.dart';
 import 'package:rastgelefifa/team_model.dart';
 import 'package:rastgelefifa/team_service.dart';
 
@@ -20,6 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
           centerTitle: true,
           title: const Text('Rastgele FIFA'),
           actions: [
+            IconButton(
+                onPressed: () async {
+                  await MatchService.getMatches();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HistoryScreen()));
+                },
+                icon: const Icon(Icons.history)),
             IconButton(
                 onPressed: () => Navigator.push(
                     context,
@@ -70,6 +83,8 @@ class _HomeScreenState extends State<HomeScreen> {
     TeamService.teamList.shuffle();
     teamModel2 = TeamService.teamList.first;
     TeamService.teamList.shuffle();
+    await MatchService.addMatch(MatchModel.fromManuel(
+        '', Timestamp.now(), teamModel1!.name, teamModel2!.name));
     setState(() {});
   }
 
