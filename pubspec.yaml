@@ -1,0 +1,72 @@
+name: rastgelefifa
+description: Tahsin vs Burak fifa takım seçimi
+version: 1.0.0+1
+environment:
+  sdk: ">=2.16.0-134.1.beta <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  firebase_core: ^1.12.0
+  cloud_firestore: ^3.1.7
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - adanademir.png
+    - ajax.png
+    - astonvilla.png
+    - bayernmunih.png
+    - benfica.png
+    - besiktas.png
+    - bilbao.png
+    - bodoglimt.png
+    - chelsea.png
+    - dortmund.png
+    - estoril.png
+    - famalicao.png
+    - fortunasittard.png
+    - fulham.png
+    - galatasaray.png
+    - gladbach.png
+    - goaheadeagles.png
+    - hullcity.png
+    - inter.png
+    - juventus.png
+    - lagalaxy.png
+    - lechpoznan.png
+    - leipzig.png
+    - leverkusen.png
+    - lille.png
+    - liverpool.png
+    - malaga.png
+    - mancity.png
+    - manunited.png
+    - milan.png
+    - om.png
+    - ol.png
+    - parisfc.png
+    - porto.png
+    - portsmouth.png
+    - psg.png
+    - realmadrid.png
+    - rizespor.png
+    - roma.png
+    - salzburg.png
+    - sociedad.png
+    - sporting.png
+    - toronto.png
+    - tottenham.png
+    - turkgucu.png
+    - walsall.png
+    - werderbremen.png
+    - westham.png
+
+    
+
