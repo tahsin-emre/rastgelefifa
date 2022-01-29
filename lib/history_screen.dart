@@ -45,9 +45,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  TextField(controller: score1),
+                  textField(score1),
                   const SizedBox(height: 10),
-                  TextField(controller: score2)
+                  textField(score2)
                 ],
               ),
               actions: [
@@ -62,5 +62,13 @@ class _HistoryScreenState extends State<HistoryScreen> {
                     child: const Text('Onayla'))
               ],
             ));
+  }
+
+  TextField textField(TextEditingController cont) {
+    return TextField(
+      controller: cont,
+      keyboardType: TextInputType.number,
+      decoration: const InputDecoration(border: OutlineInputBorder()),
+    );
   }
 }

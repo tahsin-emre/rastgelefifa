@@ -19,29 +19,32 @@ class _HomeScreenState extends State<HomeScreen> {
   TeamModel? teamModel2;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text('Rastgele FIFA'),
-          actions: [
-            IconButton(
-                onPressed: () async {
-                  await MatchService.getMatches();
-                  Navigator.push(
+    return WillPopScope(
+      onWillPop: () async => Navigator.canPop(context),
+      child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            title: const Text('Rastgele FIFA'),
+            actions: [
+              IconButton(
+                  onPressed: () async {
+                    await MatchService.getMatches();
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HistoryScreen()));
+                  },
+                  icon: const Icon(Icons.history)),
+              IconButton(
+                  onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const HistoryScreen()));
-                },
-                icon: const Icon(Icons.history)),
-            IconButton(
-                onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ListScreen())),
-                icon: const Icon(Icons.list))
-          ],
-        ),
-        body: buildBody);
+                          builder: (context) => const ListScreen())),
+                  icon: const Icon(Icons.list))
+            ],
+          ),
+          body: buildBody),
+    );
   }
 
   Widget get buildBody {
