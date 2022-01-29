@@ -86,8 +86,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget teamBar(TeamModel? model) {
     return Column(
       children: [
-        SizedBox(
-            width: 200, height: 200, child: Image.asset('${model?.name}.png')),
+        model == null
+            ? Container()
+            : SizedBox(
+                width: 200,
+                height: 200,
+                child: Image.asset('${model.name}.png')),
         Text(model?.name ?? ''),
         Text(model?.league.name ?? ''),
       ],

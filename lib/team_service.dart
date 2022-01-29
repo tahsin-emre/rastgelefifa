@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:rastgelefifa/league.dart';
 import 'package:rastgelefifa/team_model.dart';
 
@@ -53,9 +53,9 @@ class TeamService {
     TeamModel.manuel('lagalaxy', League.amerika),
     TeamModel.manuel('toronto', League.amerika),
   ];
-  static var db = FirebaseFirestore.instance;
+  // static var db = FirebaseFirestore.instance;
 
   static Future getMatches() async {
-    await db.collection('matchs').get();
+    // await db.collection('matchs').get();
   }
 }
