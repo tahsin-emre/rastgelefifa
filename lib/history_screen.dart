@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rastgelefifa/match_model.dart';
 import 'package:rastgelefifa/match_service.dart';
+import 'package:rastgelefifa/stats_screen.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({Key? key}) : super(key: key);
@@ -15,6 +16,14 @@ class _HistoryScreenState extends State<HistoryScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Maç Geçmişi'),
+        actions: [
+          IconButton(
+              onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: ((context) => const StatsScreen()))),
+              icon: const Icon(Icons.bar_chart))
+        ],
       ),
       body: buildBody,
     );
